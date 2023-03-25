@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <title>Edit Product</title>
+</head>
+<body class="bg-dark">
+    <h1 class="text-center text-white"><%=products.name.toUpperCase()%></h1>
+    <div class="row">
+        <div class="col-4 offset-4 border border-white p-auto">
+    <form action="/elect/<%=products._id%>?_method=PUT" method="POST">
+        <div class="mb-3 mt-4">
+        <label class="form-label text-success" for="name">Product Name</label>
+        <input class="form-control" type="text" name="name" id="name" placeholder="Product name" value="<%=products.name%>">
+        </div>
+        <div class="mb-3">
+        <label class="form-label text-success" for="price">Product Price</label>
+        <input class="form-control" type="number" name="price" id="price" placeholder="Product price"value="<%=products.price%>">
+        </div>
+        <div class="mb-3">
+        <label class="form-label text-success" for="image">Product Image</label>
+        <input class="form-control" type="text" name="image" id="image" placeholder="Product image" value="<%=products.image%>">
+        </div>
+        <div class="mb-4">
+        <label class="from-label text-success" for="category">Select Category</label>
+        <select name="category" id="category">
+            <option value="device">device</option>
+            <option value="wearable">wearable</option>
+            <option value="accesories">accesories</option>
+        </select>
+        </div>
+        <div class="mb-3">
+        <button class="btn btn-primary">Sumbit</button>
+        <a class="btn btn-warning" href="/electronics">All Products</a>
+    </div>
+    </form>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+    crossorigin="anonymous"></script>
+</body>
+</html>
